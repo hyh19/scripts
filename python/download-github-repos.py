@@ -16,7 +16,7 @@ for repo_url in repo_url_list:
     zip_file_url = "https://github.com/{user}/{repo}/archive/{tag}.zip".format(
         user=user, repo=repo, tag=tag)
 
-    zip_file_name = "{repo}-{tag}.zip".format(repo=repo, tag=tag)
+    zip_file_name = "{user}_{repo}.zip".format(user=user, repo=repo)
 
     # 下载压缩包
     urlretrieve(zip_file_url, zip_file_name)
