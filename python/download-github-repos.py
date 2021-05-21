@@ -23,7 +23,7 @@ for repo_url in repo_url_list:
 
     # 解压压缩包
     with zipfile.ZipFile(zip_file_name) as f:
-        f.extractall()
+        f.extractall(path=zip_file_name)
 
     # 删除压缩包
     os.remove(zip_file_name)
