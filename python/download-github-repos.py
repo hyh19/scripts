@@ -21,9 +21,12 @@ for repo_url in repo_url_list:
     # 下载压缩包
     urlretrieve(zip_file_url, zip_file_name)
 
+    # 解压目录 
+    unzip_dir = "{user}_{repo}".format(user=user, repo=repo)
+
     # 解压压缩包
     with zipfile.ZipFile(zip_file_name) as f:
-        f.extractall(path=zip_file_name)
+        f.extractall(path=unzip_dir)
 
     # 删除压缩包
     os.remove(zip_file_name)
