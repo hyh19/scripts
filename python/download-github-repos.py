@@ -22,7 +22,7 @@ for repo_url in repo_url_list:
     urlretrieve(zip_file_url, zip_file_name)
 
     # 解压目录 
-    unzip_dir = "{user}_{repo}".format(user=user, repo=repo)
+    unzip_dir = "{user}".format(user=user)
 
     # 解压压缩包
     with zipfile.ZipFile(zip_file_name) as f:
